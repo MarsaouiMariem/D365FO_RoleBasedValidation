@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>PFEModel</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{96e0e4d2-b8a6-4cce-a57f-4fce5748b0a8}</ProjectGuid>
+    <Name>PFE_Partie1</Name>
+    <RootNamespace>PFE_Partie1</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>True</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Security Duties\" />
+    <Folder Include="Security Privileges\" />
+    <Folder Include="Security Roles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxClass\EntAssetLifecycleStateUpdateEventHandlers">
+      <SubType>Content</SubType>
+      <Name>EntAssetLifecycleStateUpdateEventHandlers</Name>
+      <Link>Classes\EntAssetLifecycleStateUpdateEventHandlers</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\WorkorderLifecycleStateManager">
+      <SubType>Content</SubType>
+      <Name>WorkorderLifecycleStateManager</Name>
+      <Link>Security Duties\WorkorderLifecycleStateManager</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\WorkorderLifecycleStateSimpleWorker">
+      <SubType>Content</SubType>
+      <Name>WorkorderLifecycleStateSimpleWorker</Name>
+      <Link>Security Duties\WorkorderLifecycleStateSimpleWorker</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_CompletedToFinished">
+      <SubType>Content</SubType>
+      <Name>Role_CompletedToFinished</Name>
+      <Link>Security Privileges\Role_CompletedToFinished</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_InProgressToCompleted">
+      <SubType>Content</SubType>
+      <Name>Role_InProgressToCompleted</Name>
+      <Link>Security Privileges\Role_InProgressToCompleted</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_InProgressToPending">
+      <SubType>Content</SubType>
+      <Name>Role_InProgressToPending</Name>
+      <Link>Security Privileges\Role_InProgressToPending</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_InProgressToReleased">
+      <SubType>Content</SubType>
+      <Name>Role_InProgressToReleased</Name>
+      <Link>Security Privileges\Role_InProgressToReleased</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_InProgressToScheduled">
+      <SubType>Content</SubType>
+      <Name>Role_InProgressToScheduled</Name>
+      <Link>Security Privileges\Role_InProgressToScheduled</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_NewToInProgress">
+      <SubType>Content</SubType>
+      <Name>Role_NewToInProgress</Name>
+      <Link>Security Privileges\Role_NewToInProgress</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_NewToPending">
+      <SubType>Content</SubType>
+      <Name>Role_NewToPending</Name>
+      <Link>Security Privileges\Role_NewToPending</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_NewToReleased">
+      <SubType>Content</SubType>
+      <Name>Role_NewToReleased</Name>
+      <Link>Security Privileges\Role_NewToReleased</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_PendingToInProgress">
+      <SubType>Content</SubType>
+      <Name>Role_PendingToInProgress</Name>
+      <Link>Security Privileges\Role_PendingToInProgress</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_PendingToScheduled">
+      <SubType>Content</SubType>
+      <Name>Role_PendingToScheduled</Name>
+      <Link>Security Privileges\Role_PendingToScheduled</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_ReleasedToInProgress">
+      <SubType>Content</SubType>
+      <Name>Role_ReleasedToInProgress</Name>
+      <Link>Security Privileges\Role_ReleasedToInProgress</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_ReleasedToPending">
+      <SubType>Content</SubType>
+      <Name>Role_ReleasedToPending</Name>
+      <Link>Security Privileges\Role_ReleasedToPending</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_ReleasedToScheduled">
+      <SubType>Content</SubType>
+      <Name>Role_ReleasedToScheduled</Name>
+      <Link>Security Privileges\Role_ReleasedToScheduled</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_ScheduledToInProgress">
+      <SubType>Content</SubType>
+      <Name>Role_ScheduledToInProgress</Name>
+      <Link>Security Privileges\Role_ScheduledToInProgress</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_ScheduledToPending">
+      <SubType>Content</SubType>
+      <Name>Role_ScheduledToPending</Name>
+      <Link>Security Privileges\Role_ScheduledToPending</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\Role_ScheduledToReleased">
+      <SubType>Content</SubType>
+      <Name>Role_ScheduledToReleased</Name>
+      <Link>Security Privileges\Role_ScheduledToReleased</Link>
+    </Content>
+    <Content Include="AxSecurityRole\WorkorderLifecycleStateManager">
+      <SubType>Content</SubType>
+      <Name>WorkorderLifecycleStateManager</Name>
+      <Link>Security Roles\WorkorderLifecycleStateManager</Link>
+    </Content>
+    <Content Include="AxSecurityRole\WorkorderLifecycleStateSimpleWorker">
+      <SubType>Content</SubType>
+      <Name>WorkorderLifecycleStateSimpleWorker</Name>
+      <Link>Security Roles\WorkorderLifecycleStateSimpleWorker</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.targets" />
+</Project>
